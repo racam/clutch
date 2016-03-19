@@ -52,7 +52,7 @@ type Entry struct {
 //https://tools.ietf.org/html/rfc4287#section-4.1.3
 type Content struct {
 	CommonAttributes
-	Body string `xml:",innerxml"`
+	Text
 	Src  string `xml:"src,attr"`
 	Type string `xml:"type,attr"`
 }
@@ -60,15 +60,17 @@ type Content struct {
 //https://tools.ietf.org/html/rfc4287#section-4.2.7
 type Link struct {
 	CommonAttributes
-	Base     string `xml:"base,attr"`
-	Content  string `xml:",innerxml"`
-	Href     string `xml:"href,attr"`
-	Hreflang string `xml:"hreflang,attr"`
-	Length   string `xml:"length,attr"`
-	Lang     string `xml:"lang,attr"`
-	Rel      string `xml:"rel,attr"`
-	Title    string `xml:"title,attr"`
-	Type     string `xml:"type,attr"`
+	Content     string `-`
+	Base        string `xml:"base,attr"`
+	Href        string `xml:"href,attr"`
+	Hreflang    string `xml:"hreflang,attr"`
+	Length      string `xml:"length,attr"`
+	Lang        string `xml:"lang,attr"`
+	Rel         string `xml:"rel,attr"`
+	TextContent string `xml:",chardata"`
+	Title       string `xml:"title,attr"`
+	Type        string `xml:"type,attr"`
+	XmlContent  string `xml:",innerxml"`
 }
 
 //https://tools.ietf.org/html/rfc4287#section-4.2.11
@@ -93,8 +95,10 @@ type Source struct {
 //https://tools.ietf.org/html/rfc4287#section-3.1
 type Text struct {
 	CommonAttributes
-	Content string `xml:",innerxml"`
-	Type    string `xml:"type,attr"`
+	Content     string `-`
+	TextContent string `xml:",chardata"`
+	Type        string `xml:"type,attr"`
+	XmlContent  string `xml:",innerxml"`
 }
 
 //https://tools.ietf.org/html/rfc4287#section-3.2
@@ -114,10 +118,12 @@ type Date struct {
 //https://tools.ietf.org/html/rfc4287#section-4.2.2
 type Category struct {
 	CommonAttributes
-	Content string `xml:",innerxml"`
-	Label   string `xml:"label,attr"`
-	Scheme  string `xml:"scheme,attr"`
-	Term    string `xml:"term,attr"`
+	Content     string `-`
+	Label       string `xml:"label,attr"`
+	Scheme      string `xml:"scheme,attr"`
+	Term        string `xml:"term,attr"`
+	TextContent string `xml:",chardata"`
+	XmlContent  string `xml:",innerxml"`
 }
 
 //https://tools.ietf.org/html/rfc4287#section-4.2.4
