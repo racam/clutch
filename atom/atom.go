@@ -23,7 +23,7 @@ type Feed struct {
 	Generator   Generator   `xml:"generator"`
 	Icon        Icon        `xml:"icon"`
 	ID          Id          `xml:"id"`
-	Link        []Link      `xml:"link"`
+	Link        []*Link     `xml:"link"`
 	Logo        Logo        `xml:"logo"`
 	Rights      Text        `xml:"rights"`
 	Subtitle    Text        `xml:"subtitle"`
@@ -40,7 +40,7 @@ type Entry struct {
 	Content     Content     `xml:"content"`
 	Contributor []*Person   `xml:"contributor"`
 	ID          Id          `xml:"id"`
-	Link        []Link      `xml:"link"`
+	Link        []*Link     `xml:"link"`
 	Published   Date        `xml:"published"`
 	Rights      Text        `xml:"rights"`
 	Source      Source      `xml:"source"`
@@ -84,7 +84,7 @@ type Source struct {
 	Icon        Icon        `xml:"icon"`
 	ID          Id          `xml:"id"`
 	Lang        string      `xml:"lang,attr"`
-	Link        []Link      `xml:"link"`
+	Link        []*Link     `xml:"link"`
 	Logo        Logo        `xml:"logo"`
 	Rights      Text        `xml:"rights"`
 	Subtitle    Text        `xml:"subtitle"`
