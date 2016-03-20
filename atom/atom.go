@@ -56,11 +56,9 @@ type Content struct {
 type Link struct {
 	CommonAttributes
 	Content     string `-` //Fill with parseContent functions
-	Base        string `xml:"base,attr"`
 	Href        string `xml:"href,attr"`
 	Hreflang    string `xml:"hreflang,attr"`
 	Length      string `xml:"length,attr"`
-	Lang        string `xml:"lang,attr"`
 	Rel         string `xml:"rel,attr"`
 	TextContent string `xml:",chardata"`
 	Title       string `xml:"title,attr"`
@@ -72,13 +70,11 @@ type Link struct {
 type Source struct {
 	CommonAttributes
 	Author      []*Person   `xml:"author"`
-	Base        string      `xml:"base,attr"`
 	Category    []*Category `xml:"category"`
 	Contributor []*Person   `xml:"contributor"`
 	Generator   Generator   `xml:"generator"`
 	Icon        Icon        `xml:"icon"`
 	ID          Id          `xml:"id"`
-	Lang        string      `xml:"lang,attr"`
 	Link        []*Link     `xml:"link"`
 	Logo        Logo        `xml:"logo"`
 	Rights      Text        `xml:"rights"`
