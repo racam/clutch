@@ -12,36 +12,36 @@ type CommonAttributes struct {
 //https://tools.ietf.org/html/rfc4287#section-4.1.1
 type Feed struct {
 	CommonAttributes
-	Author      []*Person   `xml:"author"`
-	Category    []*Category `xml:"category"`
-	Contributor []*Person   `xml:"contributor"`
-	Entry       []*Entry    `xml:"entry"`
-	Generator   Generator   `xml:"generator"`
-	Icon        Icon        `xml:"icon"`
-	ID          Id          `xml:"id"`
-	Link        []*Link     `xml:"link"`
-	Logo        Logo        `xml:"logo"`
-	Rights      Text        `xml:"rights"`
-	Subtitle    Text        `xml:"subtitle"`
-	Title       Text        `xml:"title"`
-	Updated     Date        `xml:"updated"`
+	Author      []Person   `xml:"author"`
+	Category    []Category `xml:"category"`
+	Contributor []Person   `xml:"contributor"`
+	Entry       []Entry    `xml:"entry"`
+	Generator   Generator  `xml:"generator"`
+	Icon        Icon       `xml:"icon"`
+	ID          Id         `xml:"id"`
+	Link        []Link     `xml:"link"`
+	Logo        Logo       `xml:"logo"`
+	Rights      Text       `xml:"rights"`
+	Subtitle    Text       `xml:"subtitle"`
+	Title       Text       `xml:"title"`
+	Updated     Date       `xml:"updated"`
 }
 
 //https://tools.ietf.org/html/rfc4287#section-4.1.2
 type Entry struct {
 	CommonAttributes
-	Author      []*Person   `xml:"author"`
-	Category    []*Category `xml:"category"`
-	Content     Content     `xml:"content"`
-	Contributor []*Person   `xml:"contributor"`
-	ID          Id          `xml:"id"`
-	Link        []*Link     `xml:"link"`
-	Published   Date        `xml:"published"`
-	Rights      Text        `xml:"rights"`
-	Source      Source      `xml:"source"`
-	Summary     Text        `xml:"summary"`
-	Title       Text        `xml:"title"`
-	Updated     Date        `xml:"updated"`
+	Author      []Person   `xml:"author"`
+	Category    []Category `xml:"category"`
+	Content     Content    `xml:"content"`
+	Contributor []Person   `xml:"contributor"`
+	ID          Id         `xml:"id"`
+	Link        []Link     `xml:"link"`
+	Published   Date       `xml:"published"`
+	Rights      Text       `xml:"rights"`
+	Source      Source     `xml:"source"`
+	Summary     Text       `xml:"summary"`
+	Title       Text       `xml:"title"`
+	Updated     Date       `xml:"updated"`
 }
 
 //https://tools.ietf.org/html/rfc4287#section-4.1.3
@@ -69,18 +69,18 @@ type Link struct {
 //https://tools.ietf.org/html/rfc4287#section-4.2.11
 type Source struct {
 	CommonAttributes
-	Author      []*Person   `xml:"author"`
-	Category    []*Category `xml:"category"`
-	Contributor []*Person   `xml:"contributor"`
-	Generator   Generator   `xml:"generator"`
-	Icon        Icon        `xml:"icon"`
-	ID          Id          `xml:"id"`
-	Link        []*Link     `xml:"link"`
-	Logo        Logo        `xml:"logo"`
-	Rights      Text        `xml:"rights"`
-	Subtitle    Text        `xml:"subtitle"`
-	Title       Text        `xml:"title"`
-	Updated     Date        `xml:"updated"`
+	Author      []Person   `xml:"author"`
+	Category    []Category `xml:"category"`
+	Contributor []Person   `xml:"contributor"`
+	Generator   Generator  `xml:"generator"`
+	Icon        Icon       `xml:"icon"`
+	ID          Id         `xml:"id"`
+	Link        []Link     `xml:"link"`
+	Logo        Logo       `xml:"logo"`
+	Rights      Text       `xml:"rights"`
+	Subtitle    Text       `xml:"subtitle"`
+	Title       Text       `xml:"title"`
+	Updated     Date       `xml:"updated"`
 }
 
 //https://tools.ietf.org/html/rfc4287#section-3.1
@@ -90,6 +90,7 @@ type Text struct {
 	TextContent string `xml:",chardata"`
 	Type        string `xml:"type,attr"`
 	XmlContent  string `xml:",innerxml"`
+	AnyContent  string `xml:",any"`
 }
 
 //https://tools.ietf.org/html/rfc4287#section-3.2
