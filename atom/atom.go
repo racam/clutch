@@ -3,10 +3,6 @@
 
 package atom
 
-import (
-	"encoding/xml"
-)
-
 //https://tools.ietf.org/html/rfc4287#section-2
 type CommonAttributes struct {
 	Base string `xml:"base,attr"`
@@ -29,7 +25,6 @@ type Feed struct {
 	Subtitle    Text        `xml:"subtitle"`
 	Title       Text        `xml:"title"`
 	Updated     Date        `xml:"updated"`
-	XMLName     xml.Name    `xml:"http://www.w3.org/2005/Atom feed"`
 }
 
 //https://tools.ietf.org/html/rfc4287#section-4.1.2
@@ -60,7 +55,7 @@ type Content struct {
 //https://tools.ietf.org/html/rfc4287#section-4.2.7
 type Link struct {
 	CommonAttributes
-	Content     string `-`
+	Content     string `-` //Fill with parseContent functions
 	Base        string `xml:"base,attr"`
 	Href        string `xml:"href,attr"`
 	Hreflang    string `xml:"hreflang,attr"`
@@ -95,7 +90,7 @@ type Source struct {
 //https://tools.ietf.org/html/rfc4287#section-3.1
 type Text struct {
 	CommonAttributes
-	Content     string `-`
+	Content     string `-` //Fill with parseContent functions
 	TextContent string `xml:",chardata"`
 	Type        string `xml:"type,attr"`
 	XmlContent  string `xml:",innerxml"`
@@ -118,7 +113,7 @@ type Date struct {
 //https://tools.ietf.org/html/rfc4287#section-4.2.2
 type Category struct {
 	CommonAttributes
-	Content     string `-`
+	Content     string `-` //Fill with parseContent functions
 	Label       string `xml:"label,attr"`
 	Scheme      string `xml:"scheme,attr"`
 	Term        string `xml:"term,attr"`
