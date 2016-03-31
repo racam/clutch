@@ -7,7 +7,7 @@ import (
 
 func (f *Feed) check(feedIsAbsent bool) error {
 	if !feedIsAbsent {
-		if f.ID.Uri == "" {
+		if f.ID.URI == "" {
 			return errors.New("atom:feed elements MUST contain exactly one " +
 				"atom:id element.")
 		}
@@ -78,7 +78,7 @@ func (f *Feed) check(feedIsAbsent bool) error {
 }
 
 func (e *Entry) check(requiredAuthor bool) error {
-	if e.ID.Uri == "" {
+	if e.ID.URI == "" {
 		return errors.New("atom:entry elements MUST contain exactly one " +
 			"atom:id element.")
 	}
@@ -193,7 +193,7 @@ func (c *Category) check() error {
 
 	// https://tools.ietf.org/html/rfc4287#section-4.2.2.1
 	if c.Term == "" {
-		return errors.New("atom:category elements MUST have a 'term' attribute.")
+		return errors.New("atom:category elements MUST have a 'term' attribute")
 	}
 
 	return nil
@@ -208,13 +208,13 @@ func (c *Content) check() error {
 	}
 
 	// https://tools.ietf.org/html/rfc4287#section-4.1.3.2 RULE N°1
-	if c.Type == "text" && c.AnyContent != "" {
+	if c.Type == text && c.AnyContent != "" {
 		return errors.New("If the value of 'type' is 'text', the content of " +
 			"atom:content MUST NOT contain child elements.")
 	}
 
 	// https://tools.ietf.org/html/rfc4287#section-4.1.3.2 RULE N°2
-	if c.Type == "html" && c.AnyContent != "" {
+	if c.Type == html && c.AnyContent != "" {
 		return errors.New("If the value of 'type' is 'html', the content of " +
 			"atom:content MUST NOT contain child elements. Any markup within " +
 			"be escaped.")
@@ -247,18 +247,18 @@ func (l *Link) check() error {
 func (t *Text) check() error {
 
 	// https://tools.ietf.org/html/rfc4287#section-3.1.1
-	if t.Type != "text" && t.Type != "html" && t.Type != "xhtml" {
+	if t.Type != text && t.Type != html && t.Type != xhtml {
 		return errors.New("attr:type MUST be one of 'text', 'html', or 'xhtml'")
 	}
 
 	// https://tools.ietf.org/html/rfc4287#section-3.1.1.1
-	if t.Type == "text" && t.AnyContent != "" {
+	if t.Type == text && t.AnyContent != "" {
 		return errors.New("attr:type set to 'text': the content of the Text " +
 			"construct MUST NOT contain child elements.")
 	}
 
 	// https://tools.ietf.org/html/rfc4287#section-3.1.1.1
-	if t.Type == "html" && t.AnyContent != "" {
+	if t.Type == html && t.AnyContent != "" {
 		return errors.New("attr:type set to 'html': the content of the Text " +
 			"construct MUST NOT contain child elements. Any markup within " +
 			"be escaped.")

@@ -4,19 +4,25 @@ import (
 	"encoding/xml"
 )
 
-// A simple struct to test if the xml seems to be an atom document
+// atomFeed is a simple struct to test if the xml seems to be an atom document
+// that begin with a feed element
 type atomFeed struct {
 	XMLName xml.Name `xml:"http://www.w3.org/2005/Atom feed"`
 }
 
-// A simple struct to test if the xml seems to be an atom document
+// atomEntry is a simple struct to test if the xml seems to be an atom document
+// that begin with an entry element
 type atomEntry struct {
 	XMLName xml.Name `xml:"http://www.w3.org/2005/Atom entry"`
 }
 
-// IsAtom tries to find a Feed/Entry element at the root of the xml document and
+const text string = "text"
+const html string = "html"
+const xhtml string = "xhtml"
+
+// IsDeclared tries to find a Feed/Entry element at the root of the xml document and
 // looks at the namespace of this Element
-func IsAtom(data []byte) bool {
+func IsDeclared(data []byte) bool {
 
 	//Test Feed at first because it is the most common
 	f := atomFeed{}
@@ -32,6 +38,11 @@ func IsAtom(data []byte) bool {
 	return err == nil
 }
 
+// Parse parses the ATOM-encoded data into an Feed struct and return it.
+// The ATOM parsing do 3 steps :
+// * Check is the document is well declared as an Atom document
+// * Parse the structure to fill additionnals fields
+// * Check that all requirements are respected
 func Parse(data []byte) (*Feed, error) {
 	// Test Feed at first because it is the most common
 	f := Feed{}
@@ -92,8 +103,8 @@ func (e *Entry) parseContent() {
 }
 
 func (c *Category) parseContent() {
-	if c.XmlContent != "" {
-		c.Content = c.XmlContent
+	if c.XMLContent != "" {
+		c.Content = c.XMLContent
 	} else {
 		c.Content = c.TextContent
 	}
@@ -108,8 +119,8 @@ func (l *Link) parseContent() {
 		l.Rel = "alternate"
 	}
 
-	if l.XmlContent != "" {
-		l.Content = l.XmlContent
+	if l.XMLContent != "" {
+		l.Content = l.XMLContent
 	} else {
 		l.Content = l.TextContent
 	}
@@ -123,21 +134,21 @@ func (c *Content) parseContent() {
 	// source: https://tools.ietf.org/html/rfc4287#section-4.1.3.1
 
 	if c.Type == "" && c.Src == "" {
-		c.Type = "text"
+		c.Type = text
 	}
 
-	if c.Type == "xhtml" {
-		c.Content = c.XmlContent
+	if c.Type == xhtml {
+		c.Content = c.XMLContent
 		return
 	}
 
-	if c.Type == "text" || c.Type == "html" {
+	if c.Type == text || c.Type == xhtml {
 		c.Content = c.TextContent
 		return
 	}
 
-	if c.XmlContent != "" {
-		c.Content = c.XmlContent
+	if c.XMLContent != "" {
+		c.Content = c.XMLContent
 	} else {
 		c.Content = c.TextContent
 	}
@@ -163,11 +174,11 @@ func (t *Text) parseContent() {
 	// If the "type" attribute is not provided, Atom Processors MUST behave as
 	// though it were present with a value of "text"
 	if t.Type == "" {
-		t.Type = "text"
+		t.Type = text
 	}
 
-	if t.Type == "xhtml" {
-		t.Content = t.XmlContent
+	if t.Type == xhtml {
+		t.Content = t.XMLContent
 	} else {
 		t.Content = t.TextContent
 	}
