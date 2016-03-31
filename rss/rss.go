@@ -6,13 +6,15 @@ import (
 	"encoding/xml"
 )
 
+// RSS is a RSS structure like describe in
 // https://cyber.law.harvard.edu/rss/rss.html#whatIsRss
-type Rss struct {
+type RSS struct {
 	Channel Channel  `xml:"channel"`
 	Version string   `xml:"version,attr"`
-	XMLName xml.Name `rss`
+	XMLName xml.Name `xml:"rss"`
 }
 
+// Channel is a RSS structure like describe in
 // https://cyber.law.harvard.edu/rss/rss.html#requiredChannelElements
 type Channel struct {
 	Category       []Category `xml:"category"`
@@ -33,10 +35,11 @@ type Channel struct {
 	SkipHours      string     `xml:"skiphours"`
 	TextInput      TextInput  `xml:"textinput"`
 	Title          string     `xml:"source"`
-	Ttl            string     `xml:"ttl"`
+	TTL            string     `xml:"ttl"`
 	WebMaster      string     `xml:"webmaster"`
 }
 
+// Item is a RSS structure like describe in
 // https://cyber.law.harvard.edu/rss/rss.html#hrelementsOfLtitemgt
 type Item struct {
 	Author      string     `xml:"author"`
@@ -44,23 +47,25 @@ type Item struct {
 	Comments    string     `xml:"comments"`
 	Description string     `xml:"description"`
 	Enclosure   string     `xml:"enclosure"`
-	Guid        Guid       `xml:"guid"`
+	GUID        GUID       `xml:"guid"`
 	Link        string     `xml:"link"`
 	PubDate     string     `xml:"pubdate"`
 	Source      Source     `xml:"source"`
 	Title       string     `xml:"title"`
 }
 
+// Image is a RSS structure like describe in
 // https://cyber.law.harvard.edu/rss/rss.html#ltimagegtSubelementOfLtchannelgt
 type Image struct {
 	Description string `xml:"description"`
 	Height      string `xml:"height"`
 	Link        string `xml:"link"`
 	Title       string `xml:"title"`
-	Url         string `xml:"url"`
+	URL         string `xml:"url"`
 	Width       string `xml:"width"`
 }
 
+// TextInput is a RSS structure like describe in
 // https://cyber.law.harvard.edu/rss/rss.html#lttextinputgtSubelementOfLtchannelgt
 type TextInput struct {
 	Description string `xml:"description"`
@@ -69,20 +74,23 @@ type TextInput struct {
 	Title       string `xml:"title"`
 }
 
+// Source is a RSS structure like describe in
 // https://cyber.law.harvard.edu/rss/rss.html#ltsourcegtSubelementOfLtitemgt
 type Source struct {
 	Title string `xml:",chardata"`
-	Url   string `xml:"url,attr"`
+	URL   string `xml:"url,attr"`
 }
 
+// Category is a RSS structure like describe in
 // https://cyber.law.harvard.edu/rss/rss.html#ltcategorygtSubelementOfLtitemgt
 type Category struct {
 	Content string `xml:",chardata"`
 	Domain  string `xml:"domain,attr"`
 }
 
+// GUID is a RSS structure like describe in
 // https://cyber.law.harvard.edu/rss/rss.html#ltguidgtSubelementOfLtitemgt
-type Guid struct {
+type GUID struct {
 	Content     string `xml:",chardata"`
 	IsPermaLink string `xml:"ispermalink,attr"`
 }
