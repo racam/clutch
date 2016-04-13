@@ -20,6 +20,7 @@ type Feed struct {
 	Entry       []Entry    `xml:"entry"`
 	Generator   Generator  `xml:"generator"`
 	Icon        Icon       `xml:"icon"`
+	IsDeclared  bool       `xml:"-"` //internal field for the checking step
 	ID          ID         `xml:"id"`
 	Link        []Link     `xml:"link"`
 	Logo        Logo       `xml:"logo"`

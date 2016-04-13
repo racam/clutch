@@ -5,8 +5,14 @@ import (
 	"strings"
 )
 
-func (f *Feed) check(feedIsAbsent bool) error {
-	if !feedIsAbsent {
+// Check verifies all the requierements mentioned by the ATOM RFC4287. i.e
+// all the required fields/attributes are here and just once if unique.
+func Check(f *Feed) error {
+	return f.check()
+}
+
+func (f *Feed) check() error {
+	if f.IsDeclared {
 		if f.ID.URI == "" {
 			return errors.New("atom:feed elements MUST contain exactly one " +
 				"atom:id element.")

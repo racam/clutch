@@ -5,13 +5,13 @@ import (
 )
 
 // atomFeed is a simple struct to test if the xml seems to be an atom document
-// that begin with a feed element
+// that begin with an atom:feed element
 type atomFeed struct {
 	XMLName xml.Name `xml:"http://www.w3.org/2005/Atom feed"`
 }
 
 // atomEntry is a simple struct to test if the xml seems to be an atom document
-// that begin with an entry element
+// that begin with an atom:entry element
 type atomEntry struct {
 	XMLName xml.Name `xml:"http://www.w3.org/2005/Atom entry"`
 }
@@ -20,11 +20,11 @@ const text string = "text"
 const html string = "html"
 const xhtml string = "xhtml"
 
-// IsDeclared tries to find a Feed/Entry element at the root of the xml document and
-// looks at the namespace of this Element
+// IsDeclared tries to find a atom:feed or atom:Entry element at the root of the
+// XML document and looks at the namespace of this element
 func IsDeclared(data []byte) bool {
 
-	//Test Feed at first because it is the most common
+	//Test atom:feed at first because it is the most common
 	f := atomFeed{}
 	err := xml.Unmarshal(data, &f)
 
@@ -38,34 +38,36 @@ func IsDeclared(data []byte) bool {
 	return err == nil
 }
 
-// Parse parses the ATOM-encoded data into an Feed struct and return it.
-// The ATOM parsing do 3 steps :
-// * Check is the document is well declared as an Atom document
+// Parse parses the ATOM-encoded data into an atom.Feed struct and return it.
+// The ATOM parsing do 2 steps :
+// * Check that the document is well declared as an ATOM document
 // * Parse the structure to fill additionnals fields
-// * Check that all requirements are respected
 func Parse(data []byte) (*Feed, error) {
-	// Test Feed at first because it is the most common
+	// Test atom:feed at first because it is the most common
 	f := Feed{}
-
 	err := xml.Unmarshal(data, &f)
 
-	// If the Atom document does not start with Feed Element, with test with
-	// Entry Element
+	// If the ATOM document does not start with atom:feed element, we test with
+	// atom:entry element
 	feedIsAbsent := err != nil
 	if feedIsAbsent {
 		e := Entry{}
-
 		err = xml.Unmarshal(data, &e)
+
 		if err != nil {
 			return nil, err
 		}
 
 		f.Entry = append(f.Entry, e)
+		f.IsDeclared = false
+
+	} else {
+		f.IsDeclared = true
 	}
 
+	//Parse the structure in order to fill additionnals fields
 	f.parseContent()
-	err = f.check(feedIsAbsent) // look at the check.go file
-	return &f, err
+	return &f, nil
 }
 
 func (f *Feed) parseContent() {
