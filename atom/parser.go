@@ -144,7 +144,7 @@ func (c *Content) parseContent() {
 		return
 	}
 
-	if c.Type == text || c.Type == xhtml {
+	if c.Type == text || c.Type == html {
 		c.Content = c.TextContent
 		return
 	}
@@ -175,6 +175,7 @@ func (t *Text) parseContent() {
 
 	// If the "type" attribute is not provided, Atom Processors MUST behave as
 	// though it were present with a value of "text"
+	// Source : https://tools.ietf.org/html/rfc4287#section-3.1.1
 	if t.Type == "" {
 		t.Type = text
 	}

@@ -1,0 +1,8 @@
+<!--
+Description: Unit test for namespace atom declaration
+Expect:      FAIL: atom namespace is missing
+-->
+<?xml version="1.0" encoding="utf-8"?>
+   <feed>
+   </feed>
+</xml>
