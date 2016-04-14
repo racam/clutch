@@ -6,7 +6,7 @@ import (
 )
 
 func TestIsDeclared(t *testing.T) {
-	var prefix string = "../testdata/atom/"
+	var prefix = "../testdata/atom/"
 
 	var namespaces = []struct {
 		filename string // input file
