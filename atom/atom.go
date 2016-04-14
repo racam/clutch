@@ -3,6 +3,8 @@
 
 package atom
 
+import "encoding/xml"
+
 // CommonAttributes is a atom structure like describe in
 // https://tools.ietf.org/html/rfc4287#section-2
 type CommonAttributes struct {
@@ -18,16 +20,17 @@ type Feed struct {
 	Category    []Category `xml:"category"`
 	Contributor []Person   `xml:"contributor"`
 	Entry       []Entry    `xml:"entry"`
-	Generator   Generator  `xml:"generator"`
-	Icon        Icon       `xml:"icon"`
+	Generator   *Generator `xml:"generator"`
+	Icon        *Icon      `xml:"icon"`
 	IsDeclared  bool       `xml:"-"` //internal field for the checking step
-	ID          ID         `xml:"id"`
+	ID          *ID        `xml:"id"`
 	Link        []Link     `xml:"link"`
-	Logo        Logo       `xml:"logo"`
-	Rights      Text       `xml:"rights"`
-	Subtitle    Text       `xml:"subtitle"`
-	Title       Text       `xml:"title"`
-	Updated     Date       `xml:"updated"`
+	Logo        *Logo      `xml:"logo"`
+	Rights      *Text      `xml:"rights"`
+	Subtitle    *Text      `xml:"subtitle"`
+	Title       *Text      `xml:"title"`
+	Updated     *Date      `xml:"updated"`
+	XMLName     xml.Name   `xml:"feed"`
 }
 
 // Entry is a atom structure like describe in
@@ -36,16 +39,16 @@ type Entry struct {
 	CommonAttributes
 	Author      []Person   `xml:"author"`
 	Category    []Category `xml:"category"`
-	Content     Content    `xml:"content"`
+	Content     *Content   `xml:"content"`
 	Contributor []Person   `xml:"contributor"`
-	ID          ID         `xml:"id"`
+	ID          *ID        `xml:"id"`
 	Link        []Link     `xml:"link"`
-	Published   Date       `xml:"published"`
-	Rights      Text       `xml:"rights"`
-	Source      Source     `xml:"source"`
-	Summary     Text       `xml:"summary"`
-	Title       Text       `xml:"title"`
-	Updated     Date       `xml:"updated"`
+	Published   *Date      `xml:"published"`
+	Rights      *Text      `xml:"rights"`
+	Source      *Source    `xml:"source"`
+	Summary     *Text      `xml:"summary"`
+	Title       *Text      `xml:"title"`
+	Updated     *Date      `xml:"updated"`
 }
 
 // Content is a atom structure like describe in
@@ -79,15 +82,15 @@ type Source struct {
 	Author      []Person   `xml:"author"`
 	Category    []Category `xml:"category"`
 	Contributor []Person   `xml:"contributor"`
-	Generator   Generator  `xml:"generator"`
-	Icon        Icon       `xml:"icon"`
-	ID          ID         `xml:"id"`
+	Generator   *Generator `xml:"generator"`
+	Icon        *Icon      `xml:"icon"`
+	ID          *ID        `xml:"id"`
 	Link        []Link     `xml:"link"`
-	Logo        Logo       `xml:"logo"`
-	Rights      Text       `xml:"rights"`
-	Subtitle    Text       `xml:"subtitle"`
-	Title       Text       `xml:"title"`
-	Updated     Date       `xml:"updated"`
+	Logo        *Logo      `xml:"logo"`
+	Rights      *Text      `xml:"rights"`
+	Subtitle    *Text      `xml:"subtitle"`
+	Title       *Text      `xml:"title"`
+	Updated     *Date      `xml:"updated"`
 }
 
 // Text is a atom structure like describe in

@@ -83,9 +83,15 @@ func (f *Feed) parseContent() {
 		f.Link[index].parseContent()
 	}
 
-	f.Rights.parseContent()
-	f.Subtitle.parseContent()
-	f.Title.parseContent()
+	if f.Rights != nil {
+		f.Rights.parseContent()
+	}
+	if f.Subtitle != nil {
+		f.Subtitle.parseContent()
+	}
+	if f.Title != nil {
+		f.Title.parseContent()
+	}
 }
 
 func (e *Entry) parseContent() {
@@ -97,11 +103,21 @@ func (e *Entry) parseContent() {
 		e.Link[index].parseContent()
 	}
 
-	e.Content.parseContent()
-	e.Rights.parseContent()
-	e.Source.parseContent()
-	e.Summary.parseContent()
-	e.Title.parseContent()
+	if e.Content != nil {
+		e.Content.parseContent()
+	}
+	if e.Rights != nil {
+		e.Rights.parseContent()
+	}
+	if e.Source != nil {
+		e.Source.parseContent()
+	}
+	if e.Summary != nil {
+		e.Summary.parseContent()
+	}
+	if e.Title != nil {
+		e.Title.parseContent()
+	}
 }
 
 func (c *Category) parseContent() {
@@ -166,9 +182,15 @@ func (s *Source) parseContent() {
 		s.Link[index].parseContent()
 	}
 
-	s.Rights.parseContent()
-	s.Subtitle.parseContent()
-	s.Title.parseContent()
+	if s.Rights != nil {
+		s.Rights.parseContent()
+	}
+	if s.Subtitle != nil {
+		s.Subtitle.parseContent()
+	}
+	if s.Title != nil {
+		s.Title.parseContent()
+	}
 }
 
 func (t *Text) parseContent() {
