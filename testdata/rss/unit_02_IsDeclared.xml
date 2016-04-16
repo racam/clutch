@@ -1,0 +1,8 @@
+<!--
+Description: Unit test for namespace atom declaration
+Expect:      FAIL: rss version is not 2.0
+-->
+<?xml version="1.0" encoding="utf-8"?>
+   <rss version="0.92">
+   </rss>
+</xml>

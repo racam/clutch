@@ -1,0 +1,8 @@
+<!--
+Description: Unit test for rss declaration
+Expect:      PASS
+-->
+<?xml version="1.0" encoding="utf-8"?>
+   <rss version="2.0">
+   </rss>
+</xml>
