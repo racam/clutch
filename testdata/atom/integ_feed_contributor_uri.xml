@@ -1,0 +1,12 @@
+<!--
+Description: Integration test for contributor's uri
+Expect:      feed['contributor']['uri'] = 'uri'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <contributor>
+      <uri>ignored</uri>
+      <uri>uri</uri>
+    </contributor>
+  </feed>
+</xml>

@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for category's term attribute
+Expect:      feed['category']['term'] = 'term'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <category term="term" term="ignored"></category>
+  </feed>
+</xml>

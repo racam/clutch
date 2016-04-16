@@ -1,0 +1,12 @@
+{
+  "isDeclared" : true,
+  "link" : [{
+    "content" : "<tag>text</tag>",
+    "textContent" : "<tag>text</tag>",
+    "xmlContent" : "<![CDATA[<tag>text</tag>]]>",
+    "rel" : "alternate"
+    }],
+  "XMLName" : {
+    "local" : "feed"
+  }
+}

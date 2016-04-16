@@ -1,0 +1,12 @@
+{
+  "isDeclared" : true,
+  "subtitle" : {
+    "content" : "<tag>text</tag>",
+    "XMLContent" : "<![CDATA[<tag>text</tag>]]>",
+    "textContent" : "<tag>text</tag>",
+    "type" : "text"
+    },
+  "XMLName" : {
+    "local" : "feed"
+  }
+}

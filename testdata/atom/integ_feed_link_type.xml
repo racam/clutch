@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for link's type attribute
+Expect:      feed['link']['type'] = 'type'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <link type="type" type="ignored"></link>
+  </feed>
+</xml>

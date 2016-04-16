@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for rights's type attribute
+Expect:      feed['rights']['type'] = 'type'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <rights type="type" type="ignored"></rights>
+  </feed>
+</xml>

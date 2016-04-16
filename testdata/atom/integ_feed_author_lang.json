@@ -1,0 +1,9 @@
+{
+  "isDeclared" : true,
+  "author" : [{
+    "lang" : "lang"
+    }],
+  "XMLName" : {
+    "local" : "feed"
+  }
+}

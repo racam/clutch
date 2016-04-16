@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for generator's uri attribute
+Expect:      feed['generator']['uri'] = 'uri'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <generator uri="uri" uri="ignored"></generator>
+  </feed>
+</xml>

@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for id's base attribute
+Expect:      feed['id']['base'] = 'base'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <id base="base" base="ignored"></id>
+  </feed>
+</xml>

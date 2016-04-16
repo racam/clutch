@@ -1,0 +1,9 @@
+{
+  "isDeclared" : true,
+  "id" : {
+    "base" : "base"
+    },
+  "XMLName" : {
+    "local" : "feed"
+  }
+}

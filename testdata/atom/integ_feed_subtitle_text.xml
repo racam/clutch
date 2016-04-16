@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for subtitle's text content
+Expect:      feed['subtitle']['content'] = <tag>text</tag>
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <subtitle><![CDATA[<tag>text</tag>]]></subtitle>
+  </feed>
+</xml>

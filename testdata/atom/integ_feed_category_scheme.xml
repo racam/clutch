@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for category's scheme attribute
+Expect:      feed['category']['scheme'] = 'scheme'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <category scheme="scheme" scheme="ignored"></category>
+  </feed>
+</xml>

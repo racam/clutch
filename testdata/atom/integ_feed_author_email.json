@@ -1,0 +1,9 @@
+{
+  "isDeclared" : true,
+  "author" : [{
+    "email" : "email@test.com"
+    }],
+  "XMLName" : {
+    "local" : "feed"
+  }
+}

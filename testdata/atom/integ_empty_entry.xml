@@ -1,3 +1,7 @@
+<!--
+Description: Integration test for empty entry
+Expect:      feed['isDeclared'] = false
+-->
 <?xml version="1.0" encoding="UTF-8"?>
   <entry></entry>
 </xml>

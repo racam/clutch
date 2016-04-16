@@ -1,0 +1,10 @@
+{
+  "isDeclared" : true,
+  "rights" : {
+    "lang" : "lang",
+    "type" : "text"
+    },
+  "XMLName" : {
+    "local" : "feed"
+  }
+}

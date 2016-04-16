@@ -1,0 +1,9 @@
+{
+  "isDeclared" : true,
+  "generator" : {
+    "base" : "base"
+    },
+  "XMLName" : {
+    "local" : "feed"
+  }
+}

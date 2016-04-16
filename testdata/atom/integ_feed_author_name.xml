@@ -1,0 +1,12 @@
+<!--
+Description: Integration test for author's name
+Expect:      feed['author']['name'] = 'name'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <author>
+      <name>ignored</name>
+      <name>name</name>
+    </author>
+  </feed>
+</xml>

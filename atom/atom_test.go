@@ -41,7 +41,7 @@ func TestParser(t *testing.T) {
 			continue
 		}
 
-		// Parse expected  json feed
+		// Parse expected json feed
 		var expected Feed
 		err = json.Unmarshal(jsonContent, &expected)
 		if err != nil {
@@ -49,13 +49,12 @@ func TestParser(t *testing.T) {
 			continue
 		}
 
-		// debug
-		// t.Logf("%+v", actual)
-		// t.Logf("%+v", &expected)
-
-		//Becareful actual is a pointer
+		// Becareful actual is a pointer
 		if !reflect.DeepEqual(actual, &expected) {
-			t.Errorf("[Atom][Inted] file %s, xml and json don't match", name)
+			// debug
+			t.Errorf("[Atom][Integ] file %s, xml and json don't match", name)
+			t.Logf("[DEBUG]%+v", actual)
+			t.Logf("[DEBUG]%+v", &expected)
 		}
 	}
 }

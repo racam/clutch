@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for link's href attribute
+Expect:      feed['link']['href'] = 'href'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <link href="href" href="ignored"></link>
+  </feed>
+</xml>

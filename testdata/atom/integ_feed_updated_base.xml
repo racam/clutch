@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for updated's base attribute
+Expect:      feed['updated']['base'] = 'base'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <updated base="base" base="ignored"></updated>
+  </feed>
+</xml>

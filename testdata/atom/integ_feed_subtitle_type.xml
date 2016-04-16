@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for subtitle's type attribute
+Expect:      feed['subtitle']['type'] = 'type'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <subtitle type="type" type="ignored"></subtitle>
+  </feed>
+</xml>

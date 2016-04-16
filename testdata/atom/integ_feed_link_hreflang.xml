@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for link's hreflang attribute
+Expect:      feed['link']['hreflang'] = 'hreflang'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <link hreflang="hreflang" hreflang="ignored"></link>
+  </feed>
+</xml>

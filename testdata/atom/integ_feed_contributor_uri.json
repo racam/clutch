@@ -1,0 +1,9 @@
+{
+  "isDeclared" : true,
+  "contributor" : [{
+    "uri" : "uri"
+    }],
+  "XMLName" : {
+    "local" : "feed"
+  }
+}

@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for logo's lang attribute
+Expect:      feed['logo']['lang'] = 'lang'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <logo lang="lang" lang="ignored"></logo>
+  </feed>
+</xml>

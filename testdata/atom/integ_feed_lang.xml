@@ -1,7 +1,7 @@
 <!--
 Description: Integration test for empty feed
-Expect:      feed['isDeclared'] = true
+Expect:      feed['lang'] = 'lang'
 -->
 <?xml version="1.0" encoding="UTF-8"?>
-  <feed></feed>
+  <feed lang="lang" lang="ignored"></feed>
 </xml>

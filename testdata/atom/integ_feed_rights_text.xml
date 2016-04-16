@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for rights's text content
+Expect:      feed['rights']['content'] = <tag>text</tag>
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <rights><![CDATA[<tag>text</tag>]]></rights>
+  </feed>
+</xml>

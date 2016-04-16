@@ -1,0 +1,10 @@
+{
+  "isDeclared" : true,
+  "link" : [{
+    "lang" : "lang",
+    "rel" : "alternate"
+    }],
+  "XMLName" : {
+    "local" : "feed"
+  }
+}

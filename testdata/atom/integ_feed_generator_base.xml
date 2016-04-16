@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for generator's base attribute
+Expect:      feed['generator']['base'] = 'base'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <generator base="base" base="ignored"></generator>
+  </feed>
+</xml>

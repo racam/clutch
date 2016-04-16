@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for title's xhtml content
+Expect:      feed['title']['content'] = <![CDATA[<tag>text</tag>]]>
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <title type="xhtml"><![CDATA[<tag>text</tag>]]></title>
+  </feed>
+</xml>

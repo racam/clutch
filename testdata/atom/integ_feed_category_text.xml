@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for category's text content
+Expect:      feed['category']['TextContent'] and ['Content'] = '<tag>text</tag>'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <category><![CDATA[<tag>text</tag>]]></category>
+  </feed>
+</xml>

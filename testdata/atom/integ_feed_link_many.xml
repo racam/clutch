@@ -1,0 +1,11 @@
+<!--
+Description: Integration test for 3 feed's link
+Expect:      size(feed['link']) = 3
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <link></link>
+    <link></link>
+    <link></link>
+  </feed>
+</xml>

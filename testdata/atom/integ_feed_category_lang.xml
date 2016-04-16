@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for category's lang attribute
+Expect:      feed['category']['lang'] = 'lang'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <category lang="lang" lang="ignored"></category>
+  </feed>
+</xml>

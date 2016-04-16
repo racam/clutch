@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for title's lang attribute
+Expect:      feed['title']['lang'] = 'lang'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <title lang="lang" lang="ignored"></title>
+  </feed>
+</xml>

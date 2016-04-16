@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for title's base attribute
+Expect:      feed['title']['base'] = 'base'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <title base="base" base="ignored"></title>
+  </feed>
+</xml>

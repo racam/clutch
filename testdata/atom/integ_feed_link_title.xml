@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for link's title attribute
+Expect:      feed['link']['title'] = 'title'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <link title="title" title="ignored"></link>
+  </feed>
+</xml>

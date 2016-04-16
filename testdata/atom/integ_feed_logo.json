@@ -1,0 +1,9 @@
+{
+  "isDeclared" : true,
+  "logo" : {
+    "uri" : "logo"
+    },
+  "XMLName" : {
+    "local" : "feed"
+  }
+}

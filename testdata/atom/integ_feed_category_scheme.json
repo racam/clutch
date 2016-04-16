@@ -1,0 +1,9 @@
+{
+  "isDeclared" : true,
+  "category" : [{
+    "scheme" : "scheme"
+    }],
+  "XMLName" : {
+    "local" : "feed"
+  }
+}

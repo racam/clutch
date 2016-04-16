@@ -1,0 +1,11 @@
+<!--
+Description: Integration test for 3 feed's category
+Expect:      size(feed['category']) = 3
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <category></category>
+    <category></category>
+    <category></category>
+  </feed>
+</xml>

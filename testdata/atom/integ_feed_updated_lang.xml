@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for updated's lang attribute
+Expect:      feed['updated']['lang'] = 'lang'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <updated lang="lang" lang="ignored"></updated>
+  </feed>
+</xml>

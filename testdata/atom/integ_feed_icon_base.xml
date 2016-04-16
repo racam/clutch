@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for icon's base attribute
+Expect:      feed['icon']['base'] = 'base'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <icon base="base" base="ignored"></icon>
+  </feed>
+</xml>

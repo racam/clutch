@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for icon's lang attribute
+Expect:      feed['icon']['lang'] = 'lang'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <icon lang="lang" lang="ignored"></icon>
+  </feed>
+</xml>

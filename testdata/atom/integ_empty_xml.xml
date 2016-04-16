@@ -1,0 +1,5 @@
+<!--
+Description: Integration test for missing xml namespace
+Expect:      feed['isDeclared'] = true and atom nampespace
+-->
+<feed  xmlns="ignored" xmlns="http://www.w3.org/2005/Atom"></feed>

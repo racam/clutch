@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for subtitle's xhtml content
+Expect:      feed['subtitle']['content'] = <![CDATA[<tag>text</tag>]]>
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <subtitle type="xhtml"><![CDATA[<tag>text</tag>]]></subtitle>
+  </feed>
+</xml>

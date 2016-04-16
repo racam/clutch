@@ -71,8 +71,8 @@ func Parse(data []byte) (*Feed, error) {
 }
 
 func (f *Feed) parseContent() {
-	for _, c := range f.Category {
-		c.parseContent()
+	for index := range f.Category {
+		f.Category[index].parseContent()
 	}
 
 	for index := range f.Entry {
@@ -121,7 +121,7 @@ func (e *Entry) parseContent() {
 }
 
 func (c *Category) parseContent() {
-	if c.XMLContent != "" {
+	if c.XMLContent != "" && c.TextContent == "" {
 		c.Content = c.XMLContent
 	} else {
 		c.Content = c.TextContent
@@ -137,7 +137,7 @@ func (l *Link) parseContent() {
 		l.Rel = "alternate"
 	}
 
-	if l.XMLContent != "" {
+	if l.XMLContent != "" && l.TextContent == "" {
 		l.Content = l.XMLContent
 	} else {
 		l.Content = l.TextContent

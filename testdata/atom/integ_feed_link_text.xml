@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for link's text content
+Expect:      feed['link']['TextContent'] and ['Content'] = '<tag>text</tag>'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <link><![CDATA[<tag>text</tag>]]></link>
+  </feed>
+</xml>

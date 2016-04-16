@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for generator's lang attribute
+Expect:      feed['generator']['lang'] = 'lang'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <generator lang="lang" lang="ignored"></generator>
+  </feed>
+</xml>

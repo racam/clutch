@@ -1,0 +1,9 @@
+{
+  "isDeclared" : true,
+  "category" : [{
+    "lang" : "lang"
+    }],
+  "XMLName" : {
+    "local" : "feed"
+  }
+}

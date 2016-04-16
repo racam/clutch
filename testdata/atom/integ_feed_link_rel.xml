@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for link's rel attribute
+Expect:      feed['link']['rel'] = 'rel'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <link rel="rel" rel="ignored"></link>
+  </feed>
+</xml>

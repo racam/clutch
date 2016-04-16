@@ -1,0 +1,11 @@
+<!--
+Description: Integration test for 3 feed's id
+Expect:      feed['id'] = 'id'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <id>ignored</id>
+    <id>ignored</id>
+    <id>id</id>
+  </feed>
+</xml>

@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for link's lang attribute
+Expect:      feed['link']['lang'] = 'lang'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <link lang="lang" lang="ignored"></link>
+  </feed>
+</xml>

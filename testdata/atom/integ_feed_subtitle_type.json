@@ -1,0 +1,9 @@
+{
+  "isDeclared" : true,
+  "subtitle" : {
+    "type" : "type"
+    },
+  "XMLName" : {
+    "local" : "feed"
+  }
+}

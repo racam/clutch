@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for rights's base attribute
+Expect:      feed['rights']['base'] = 'base'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <feed>
+    <rights base="base" base="ignored"></rights>
+  </feed>
+</xml>
