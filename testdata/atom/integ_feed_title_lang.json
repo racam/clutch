@@ -1,8 +1,7 @@
 {
   "isDeclared" : true,
   "title" : {
-    "lang" : "lang",
-    "type" : "text"
+    "lang" : "lang"
     },
   "XMLName" : {
     "local" : "feed"

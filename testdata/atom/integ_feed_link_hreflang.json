@@ -1,8 +1,7 @@
 {
   "isDeclared" : true,
   "link" : [{
-    "hreflang" : "hreflang",
-    "rel" : "alternate"
+    "hreflang" : "hreflang"
     }],
   "XMLName" : {
     "local" : "feed"

@@ -98,15 +98,9 @@ func (f *Feed) parseContent() {
 		f.Link[index].parseContent()
 	}
 
-	if f.Rights != nil {
-		f.Rights.parseContent()
-	}
-	if f.Subtitle != nil {
-		f.Subtitle.parseContent()
-	}
-	if f.Title != nil {
-		f.Title.parseContent()
-	}
+	f.Rights.parseContent()
+	f.Subtitle.parseContent()
+	f.Title.parseContent()
 }
 
 func (e *Entry) parseContent() {
@@ -118,21 +112,11 @@ func (e *Entry) parseContent() {
 		e.Link[index].parseContent()
 	}
 
-	if e.Content != nil {
-		e.Content.parseContent()
-	}
-	if e.Rights != nil {
-		e.Rights.parseContent()
-	}
-	if e.Source != nil {
-		e.Source.parseContent()
-	}
-	if e.Summary != nil {
-		e.Summary.parseContent()
-	}
-	if e.Title != nil {
-		e.Title.parseContent()
-	}
+	e.Content.parseContent()
+	e.Rights.parseContent()
+	e.Source.parseContent()
+	e.Summary.parseContent()
+	e.Title.parseContent()
 }
 
 func (c *Category) parseContent() {
@@ -144,48 +128,46 @@ func (c *Category) parseContent() {
 }
 
 func (l *Link) parseContent() {
-
-	// If the "rel" attribute is not present, the link element MUST be
-	// interpreted as if the link relation type is "alternate".
-	// source: https://tools.ietf.org/html/rfc4287#section-4.2.7.2
-	if l.Rel == "" {
-		l.Rel = "alternate"
-	}
-
 	if l.XMLContent != "" && l.TextContent == "" {
 		l.Content = l.XMLContent
 	} else {
 		l.Content = l.TextContent
 	}
+
+	// If the "rel" attribute is not present, the link element MUST be
+	// interpreted as if the link relation type is "alternate".
+	// source: https://tools.ietf.org/html/rfc4287#section-4.2.7.2
+	if l.Content == "" && l.Href == "" {
+		return
+	}
+
+	if l.Rel == "" {
+		l.Rel = "alternate"
+	}
 }
 
 func (c *Content) parseContent() {
-
 	// If neither the "type" attribute nor the "src" attribute is provided, Atom
 	// Processors MUST behave as though the "type" attribute were present with a
 	// value of "text".
 	// source: https://tools.ietf.org/html/rfc4287#section-4.1.3.1
+	var innerType string
 
-	if c.Type == "" && c.Src == "" {
-		c.Type = text
+	if innerType = c.Type; c.Type == "" && c.Src == "" {
+		innerType = text
 	}
 
-	if c.Type == xhtml {
-		c.Content = c.XMLContent
-		return
-	}
-
-	if c.Type == text || c.Type == html {
+	if innerType == text || innerType == html {
 		c.Content = c.TextContent
-		return
-	}
-
-	if c.XMLContent != "" {
+	} else if c.XMLContent != "" {
 		c.Content = c.XMLContent
 	} else {
 		c.Content = c.TextContent
 	}
 
+	if c.Content != "" {
+		c.Type = innerType
+	}
 }
 
 func (s *Source) parseContent() {
@@ -197,29 +179,23 @@ func (s *Source) parseContent() {
 		s.Link[index].parseContent()
 	}
 
-	if s.Rights != nil {
-		s.Rights.parseContent()
-	}
-	if s.Subtitle != nil {
-		s.Subtitle.parseContent()
-	}
-	if s.Title != nil {
-		s.Title.parseContent()
-	}
+	s.Rights.parseContent()
+	s.Subtitle.parseContent()
+	s.Title.parseContent()
 }
 
 func (t *Text) parseContent() {
-
-	// If the "type" attribute is not provided, Atom Processors MUST behave as
-	// though it were present with a value of "text"
-	// Source : https://tools.ietf.org/html/rfc4287#section-3.1.1
-	if t.Type == "" {
-		t.Type = text
-	}
 
 	if t.Type == xhtml {
 		t.Content = t.XMLContent
 	} else {
 		t.Content = t.TextContent
+	}
+
+	// If the "type" attribute is not provided, Atom Processors MUST behave as
+	// though it were present with a value of "text"
+	// Source : https://tools.ietf.org/html/rfc4287#section-3.1.1
+	if t.Type == "" && t.Content != "" {
+		t.Type = text
 	}
 }
