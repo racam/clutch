@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for link's lang attribute
+Expect:      entry['link']['lang'] = 'lang'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <link lang="lang" lang="ignored"></link>
+  </entry>
+</xml>

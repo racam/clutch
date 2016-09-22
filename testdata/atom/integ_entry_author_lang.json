@@ -1,6 +1,7 @@
 {
   "isDeclared" : false,
   "entry" : [{
+    "author" : [{"lang" : "lang"}],
     "XMLName" : {"local" : "entry"}
-    }]
+  }]
 }

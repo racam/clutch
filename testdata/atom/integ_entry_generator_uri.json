@@ -1,6 +1,7 @@
 {
   "isDeclared" : false,
   "entry" : [{
+    "generator" : {"uri" : "uri"},
     "XMLName" : {"local" : "entry"}
-    }]
+  }]
 }

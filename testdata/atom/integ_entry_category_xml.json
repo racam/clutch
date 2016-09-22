@@ -1,0 +1,11 @@
+{
+  "isDeclared" : false,
+  "entry" : [{
+    "category" : [{
+      "content" : "<tag>text</tag>",
+      "textContent" : "",
+      "xmlContent" : "<tag>text</tag>"
+    }],
+    "XMLName" : {"local" : "entry"}
+  }]
+}

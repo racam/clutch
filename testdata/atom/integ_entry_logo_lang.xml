@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for logo's lang attribute
+Expect:      entry['logo']['lang'] = 'lang'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <logo lang="lang" lang="ignored"></logo>
+  </entry>
+</xml>

@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for title's lang attribute
+Expect:      entry['title']['lang'] = 'lang'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <title lang="lang" lang="ignored"></title>
+  </entry>
+</xml>

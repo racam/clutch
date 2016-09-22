@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for link's length attribute
+Expect:      entry['link']['length'] = 'length'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <link length="length" length="ignored"></link>
+  </entry>
+</xml>

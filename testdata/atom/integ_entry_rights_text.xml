@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for rights's text content
+Expect:      entry['rights']['content'] = <tag>text</tag>
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <rights><![CDATA[<tag>text</tag>]]></rights>
+  </entry>
+</xml>

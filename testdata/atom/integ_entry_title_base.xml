@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for title's base attribute
+Expect:      entry['title']['base'] = 'base'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <title base="base" base="ignored"></title>
+  </entry>
+</xml>

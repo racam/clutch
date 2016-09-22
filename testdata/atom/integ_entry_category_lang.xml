@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for category's lang attribute
+Expect:      entry['category']['lang'] = 'lang'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <category lang="lang" lang="ignored"></category>
+  </entry>
+</xml>

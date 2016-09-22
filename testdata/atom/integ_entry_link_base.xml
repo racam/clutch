@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for link's base attribute
+Expect:      entry['link']['base'] = 'base'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <link base="base" base="ignored"></link>
+  </entry>
+</xml>

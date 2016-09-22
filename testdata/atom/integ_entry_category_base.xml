@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for category's base attribute
+Expect:      entry['category']['base'] = 'base'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <category base="base" base="ignored"></category>
+  </entry>
+</xml>

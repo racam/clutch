@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for updated's lang attribute
+Expect:      entry['updated']['lang'] = 'lang'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <updated lang="lang" lang="ignored"></updated>
+  </entry>
+</xml>

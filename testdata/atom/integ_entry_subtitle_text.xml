@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for subtitle's text content
+Expect:      entry['subtitle']['content'] = <tag>text</tag>
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <subtitle><![CDATA[<tag>text</tag>]]></subtitle>
+  </entry>
+</xml>

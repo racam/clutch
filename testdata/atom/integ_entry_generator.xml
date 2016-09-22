@@ -1,0 +1,11 @@
+<!--
+Description: Integration test for 3 feed's generator
+Expect:      entry['generator'] = 'generator'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <generator>ignored</generator>
+    <generator>ignored</generator>
+    <generator>generator</generator>
+  </entry>
+</xml>

@@ -68,8 +68,8 @@ func TestParser(t *testing.T) {
 		if !reflect.DeepEqual(actual, &expected) {
 			// debug
 			t.Errorf("[Atom][Integ] file %s, xml and json don't match", name)
-			//t.Logf("[DEBUG]%+v", actual)
-			//t.Logf("[DEBUG]%+v", &expected)
+			t.Logf("[DEBUG]%+v", actual)
+			t.Logf("[DEBUG]%+v", &expected)
 		}
 	}
 }

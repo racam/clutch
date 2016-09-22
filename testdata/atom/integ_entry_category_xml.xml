@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for category's xml content
+Expect:      entry['category']['XMLContent'] and ['Content'] = '<tag>text</tag>'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <category><tag>text</tag></category>
+  </entry>
+</xml>

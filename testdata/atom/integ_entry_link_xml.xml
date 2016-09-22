@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for link's xml content
+Expect:      entry['link']['XMLContent'] and ['Content'] = '<tag>text</tag>'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <link><tag>text</tag></link>
+  </entry>
+</xml>

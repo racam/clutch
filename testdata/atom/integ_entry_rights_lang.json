@@ -1,6 +1,7 @@
 {
   "isDeclared" : false,
   "entry" : [{
+    "rights" : {"lang" : "lang"},
     "XMLName" : {"local" : "entry"}
-    }]
+  }]
 }

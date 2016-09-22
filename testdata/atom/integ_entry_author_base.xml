@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for author's base attribute
+Expect:      entry['author']['base'] = 'base'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <author base="base" base="ignored"></author>
+  </entry>
+</xml>

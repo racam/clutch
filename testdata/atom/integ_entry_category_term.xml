@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for category's term attribute
+Expect:      entry['category']['term'] = 'term'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <category term="term" term="ignored"></category>
+  </entry>
+</xml>

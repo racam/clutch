@@ -1,0 +1,11 @@
+{
+  "isDeclared" : false,
+  "entry" : [{
+    "category" : [{
+      "content" : "<tag>text</tag>",
+      "textContent" : "<tag>text</tag>",
+      "xmlContent" : "<![CDATA[<tag>text</tag>]]>"
+    }],
+    "XMLName" : {"local" : "entry"}
+  }]
+}

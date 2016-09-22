@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for subtitle's type attribute
+Expect:      entry['subtitle']['type'] = 'type'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <subtitle type="type" type="ignored"></subtitle>
+  </entry>
+</xml>

@@ -1,0 +1,12 @@
+<!--
+Description: Integration test for author's uri
+Expect:      entry['author']['uri'] = 'uri'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <author>
+      <uri>ignored</uri>
+      <uri>uri</uri>
+    </author>
+  </entry>
+</xml>

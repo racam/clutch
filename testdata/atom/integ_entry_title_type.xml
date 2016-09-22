@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for title's type attribute
+Expect:      entry['title']['type'] = 'type'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <title type="type" type="ignored"></title>
+  </entry>
+</xml>

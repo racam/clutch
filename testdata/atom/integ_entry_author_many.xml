@@ -1,0 +1,11 @@
+<!--
+Description: Integration test for 3 feed's author
+Expect:      size(entry['author']) = 3
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <author></author>
+    <author></author>
+    <author></author>
+  </entry>
+</xml>

@@ -1,6 +1,7 @@
 {
   "isDeclared" : false,
   "entry" : [{
+    "link" : [{"base" : "base"}],
     "XMLName" : {"local" : "entry"}
-    }]
+  }]
 }

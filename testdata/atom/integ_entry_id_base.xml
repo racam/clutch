@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for id's base attribute
+Expect:      entry['id']['base'] = 'base'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <id base="base" base="ignored"></id>
+  </entry>
+</xml>

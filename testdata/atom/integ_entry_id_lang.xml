@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for id's lang attribute
+Expect:      entry['id']['lang'] = 'lang'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <id lang="lang" lang="ignored"></id>
+  </entry>
+</xml>

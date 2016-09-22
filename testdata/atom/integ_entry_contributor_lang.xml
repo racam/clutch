@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for contributor's lang attribute
+Expect:      entry['contributor']['lang'] = 'lang'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <contributor lang="lang" lang="ignored"></contributor>
+  </entry>
+</xml>

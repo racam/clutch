@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for rights's lang attribute
+Expect:      entry['rights']['lang'] = 'lang'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <rights lang="lang" lang="ignored"></rights>
+  </entry>
+</xml>

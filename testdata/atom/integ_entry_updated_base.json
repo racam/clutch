@@ -1,6 +1,7 @@
 {
   "isDeclared" : false,
   "entry" : [{
+    "updated" : {"base" : "base"},
     "XMLName" : {"local" : "entry"}
-    }]
+  }]
 }

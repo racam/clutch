@@ -20,9 +20,9 @@ import (
 	"testing"
 )
 
-func TestIsDeclared(t *testing.T) {
-	var prefix = "../testdata/atom/"
+var prefix = "../testdata/atom/"
 
+func TestIsDeclared(t *testing.T) {
 	var namespaces = []struct {
 		filename string // input file
 		expected bool   // expected result
@@ -45,8 +45,30 @@ func TestIsDeclared(t *testing.T) {
 			//Test if isDeclared return an expected result
 			if res != ns.expected {
 				t.Errorf(`[Atom][Unit] file '%s' : expected result '%t',
-        actual %t`, ns.filename, ns.expected, res)
+					actual %t`, ns.filename, ns.expected, res)
 			}
+		}
+	}
+}
+
+func TestFailParse(t *testing.T) {
+	filename := "unit_04_not_atom.xml"
+	f, err := ioutil.ReadFile(prefix + filename)
+
+	if err != nil {
+		t.Errorf("[Atom][Unit][Parse] file '%s' : is missing",
+			prefix+filename)
+	} else {
+		res, err2 := Parse(f)
+		t.Logf("[DEBUG]%+v", res)
+
+		//Test if Parse return an expected result
+		if res != nil {
+			t.Errorf(`[Atom][Unit][Parse] file '%s' : Feed is not nil`, filename)
+		}
+
+		if err2 == nil {
+			t.Errorf(`[Atom][Unit][Parse] file '%s' : error is nil`, filename)
 		}
 	}
 }

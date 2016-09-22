@@ -1,6 +1,10 @@
 {
   "isDeclared" : false,
   "entry" : [{
+    "link" : [{
+      "href" : "href",
+      "rel" : "alternate"
+    }],
     "XMLName" : {"local" : "entry"}
-    }]
+  }]
 }

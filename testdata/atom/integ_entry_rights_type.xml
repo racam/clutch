@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for rights's type attribute
+Expect:      entry['rights']['type'] = 'type'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <rights type="type" type="ignored"></rights>
+  </entry>
+</xml>

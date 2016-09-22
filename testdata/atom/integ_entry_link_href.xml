@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for link's href attribute
+Expect:      entry['link']['href'] = 'href'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <link href="href" href="ignored"></link>
+  </entry>
+</xml>

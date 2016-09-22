@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for generator's version attribute
+Expect:      entry['generator']['version'] = 'version'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <generator version="version" version="ignored"></generator>
+  </entry>
+</xml>

@@ -1,0 +1,11 @@
+<!--
+Description: Integration test for 3 feed's icon
+Expect:      entry['icon'] = 'icon'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <icon>ignored</icon>
+    <icon>ignored</icon>
+    <icon>icon</icon>
+  </entry>
+</xml>

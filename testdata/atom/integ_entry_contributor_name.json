@@ -1,6 +1,7 @@
 {
   "isDeclared" : false,
   "entry" : [{
+    "contributor" : [{"name" : "name"}],
     "XMLName" : {"local" : "entry"}
-    }]
+  }]
 }

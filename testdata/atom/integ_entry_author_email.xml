@@ -1,0 +1,12 @@
+<!--
+Description: Integration test for author's email
+Expect:      entry['author']['email'] = 'email@test.com'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <author>
+      <email>ignored</email>
+      <email>email@test.com</email>
+    </author>
+  </entry>
+</xml>

@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for title's text content
+Expect:      entry['title']['content'] = <tag>text</tag>
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <title><![CDATA[<tag>text</tag>]]></title>
+  </entry>
+</xml>

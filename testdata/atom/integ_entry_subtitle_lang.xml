@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for subtitle's lang attribute
+Expect:      entry['subtitle']['lang'] = 'lang'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <subtitle lang="lang" lang="ignored"></subtitle>
+  </entry>
+</xml>

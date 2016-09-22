@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for generator's uri attribute
+Expect:      entry['generator']['uri'] = 'uri'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <generator uri="uri" uri="ignored"></generator>
+  </entry>
+</xml>

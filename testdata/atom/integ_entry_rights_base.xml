@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for rights's base attribute
+Expect:      entry['rights']['base'] = 'base'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <rights base="base" base="ignored"></rights>
+  </entry>
+</xml>

@@ -1,0 +1,12 @@
+<!--
+Description: Integration test for contributor's name
+Expect:      entry['contributor']['name'] = 'name'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <contributor>
+      <name>ignored</name>
+      <name>name</name>
+    </contributor>
+  </entry>
+</xml>

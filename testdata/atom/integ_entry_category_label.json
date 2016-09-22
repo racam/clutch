@@ -1,6 +1,7 @@
 {
   "isDeclared" : false,
   "entry" : [{
+    "category" : [{"label" : "label"}],
     "XMLName" : {"local" : "entry"}
-    }]
+  }]
 }

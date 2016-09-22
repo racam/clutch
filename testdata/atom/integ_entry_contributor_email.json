@@ -1,6 +1,7 @@
 {
   "isDeclared" : false,
   "entry" : [{
+    "contributor" : [{"email" : "email@test.com"}],
     "XMLName" : {"local" : "entry"}
-    }]
+  }]
 }

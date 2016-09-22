@@ -1,0 +1,7 @@
+<!--
+Description: Integration test for empty feed
+Expect:      entry['lang'] = 'lang'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry lang="lang" lang="ignored"></entry>
+</xml>

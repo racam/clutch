@@ -1,6 +1,7 @@
 {
   "isDeclared" : false,
   "entry" : [{
+    "contributor" : [{"uri" : "uri"}],
     "XMLName" : {"local" : "entry"}
-    }]
+  }]
 }

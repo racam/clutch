@@ -1,6 +1,7 @@
 {
   "isDeclared" : false,
   "entry" : [{
+    "generator" : {"version" : "version"},
     "XMLName" : {"local" : "entry"}
-    }]
+  }]
 }

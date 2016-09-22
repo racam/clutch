@@ -1,0 +1,9 @@
+<!--
+Description: Integration test for link's empty rel attribute
+Expect:      entry['link']['rel'] = 'alternate'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <link></link>
+  </entry>
+</xml>

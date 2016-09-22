@@ -1,0 +1,11 @@
+<!--
+Description: Integration test for 3 feed's logo
+Expect:      entry['logo'] = 'logo'
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+  <entry>
+    <logo>ignored</logo>
+    <logo>ignored</logo>
+    <logo>logo</logo>
+  </entry>
+</xml>

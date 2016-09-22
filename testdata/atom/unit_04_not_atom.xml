@@ -1,0 +1,8 @@
+<!--
+Description: Unit test for no feed or entry detected
+Expect:      FAIL: feed or entry is missing
+-->
+<?xml version="1.0" encoding="utf-8"?>
+   <random>
+   </random>
+</xml>

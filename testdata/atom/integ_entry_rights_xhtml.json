@@ -1,0 +1,12 @@
+{
+  "isDeclared" : false,
+  "entry" : [{
+    "rights" : {
+      "content" : "<![CDATA[<tag>text</tag>]]>",
+      "XMLContent" : "<![CDATA[<tag>text</tag>]]>",
+      "textContent" : "<tag>text</tag>",
+      "type" : "xhtml"
+    },
+    "XMLName" : {"local" : "entry"}
+  }]
+}

@@ -1,6 +1,7 @@
 {
   "isDeclared" : false,
   "entry" : [{
+    "logo" : {"uri" : "logo"},
     "XMLName" : {"local" : "entry"}
-    }]
+  }]
 }

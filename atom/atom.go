@@ -64,6 +64,7 @@ type Entry struct {
 	Summary     Text       `xml:"summary"`
 	Title       Text       `xml:"title"`
 	Updated     Date       `xml:"updated"`
+	XMLName     xml.Name   `xml:"entry"`
 }
 
 // Content is a atom structure like describe in
